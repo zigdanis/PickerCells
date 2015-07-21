@@ -1,4 +1,4 @@
-# PIckerCells
+# PickerCells
 This class adds UIDatePicker or UIPickerView that will slide in/out by tapping on the cell in your UITableView.
 
 Inspired by Apple's [DateCell](https://developer.apple.com/library/ios/samplecode/DateCell/Introduction/Intro.html) example and [andjash's](https://github.com/andjash) [DateCellsController](https://github.com/andjash/DateCellsController).
@@ -7,13 +7,14 @@ Inspired by Apple's [DateCell](https://developer.apple.com/library/ios/samplecod
 <img src=http://i.imgur.com/Z8vbhNFl.png>
 <img src=http://i.imgur.com/WfgTUtel.png>
 ## Usage
-1. Instantiate and setup `PickerCellsController` class.
+1. Import with `#import "PickerCells.h"`
+2. Instantiate and setup `PickerCellsController` class.
 
   ```objective-c
   self.pickersController = [[PickerCellsController alloc] init];
   [self.pickersController attachToTableView:self.tableView tableViewsPriorDelegate:self withDelegate:self];
   ```
-2. Add `UIPickerView` and `UIDatePicker` instances with correspoding indexPaths
+3. Add `UIPickerView` and `UIDatePicker` instances with correspoding indexPaths
 
   ```objective-c
   UIPickerView *pickerView = [[UIPickerView alloc] init];
@@ -29,7 +30,7 @@ Inspired by Apple's [DateCell](https://developer.apple.com/library/ios/samplecod
   [self.pickersController addDatePicker:datePicker1 forIndexPath:path1];
   ``` 
 
-3. And that's pretty much everything for showing pickers by tapping on corresponding cells. This class do not responsible for giving you information about picker selected values. So ypou should do it by yourself. But if you can get pickers from `PickerCellsController` by corresponding cells indexPaths:
+4. And that's pretty much everything for showing pickers by tapping on corresponding cells. This class do not responsible for giving you information about picker selected values. So ypou should do it by yourself. But if you can get pickers from `PickerCellsController` by corresponding cells indexPaths:
 
   ```objective-c
   id picker = [self.pickersController pickerForOwnerCellIndexPath:indexPath];
