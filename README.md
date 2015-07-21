@@ -1,5 +1,8 @@
 # PIckerCells
-This class adds UIDatePicker or UIPickerView that will slide in/out by tapping on the cell in your UITableView
+This class adds UIDatePicker or UIPickerView that will slide in/out by tapping on the cell in your UITableView.
+
+Inspired by Apple's [DateCell](https://developer.apple.com/library/ios/samplecode/DateCell/Introduction/Intro.html) example and [andjash's](https://github.com/andjash) [DateCellsController](https://github.com/andjash/DateCellsController).
+
 ## Screenshots
 <img src=http://i.imgur.com/Z8vbhNFl.png>
 <img src=http://i.imgur.com/WfgTUtel.png>
@@ -31,10 +34,10 @@ NSIndexPath *path1 = [NSIndexPath indexPathForRow:2 inSection:0];
 ```objective-c
 id picker = [self.pickersController pickerForOwnerCellIndexPath:indexPath];
 if ([picker isKindOfClass:UIDatePicker.class]) {
-UIDatePicker *datePicker = (UIDatePicker *)picker;
-NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-[dateFormatter setDateFormat:@"dd-MM-yyyy"];
-cell.textLabel.text = [dateFormatter stringFromDate:[datePicker date]];
+  UIDatePicker *datePicker = (UIDatePicker *)picker;
+  NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+  [dateFormatter setDateFormat:@"dd-MM-yyyy"];
+  cell.textLabel.text = [dateFormatter stringFromDate:[datePicker date]];
 }
 ```
 ## Installation
