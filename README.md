@@ -3,6 +3,8 @@ This class adds UIDatePicker or UIPickerView that will slide in/out by tapping o
 ## Screenshots
 <img src=http://i.imgur.com/Z8vbhNFl.png>
 <img src=http://i.imgur.com/WfgTUtel.png>
+## Minimum iOS version
+iOS 6.0
 ## Usage
 1. Instantiate and setup `PickerCellsController` class.
 
