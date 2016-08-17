@@ -32,7 +32,7 @@ iOS 6.0
   [self.pickersController addDatePicker:datePicker1 forIndexPath:path1];
   ``` 
 
-4. And that's pretty much everything for showing pickers by tapping on corresponding cells. This class do not responsible for giving you information about picker selected values. So ypou should do it by yourself. But if you can get pickers from `PickerCellsController` by corresponding cells indexPaths:
+4. And that's pretty much everything for showing pickers by tapping on corresponding cells. This class do not responsible for giving you information about picker selected values. So you should do it by yourself. But you can get pickers from `PickerCellsController` by using corresponding cells indexPaths:
 
   ```objective-c
   id picker = [self.pickersController pickerForOwnerCellIndexPath:indexPath];
