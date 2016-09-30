@@ -72,6 +72,10 @@
     [self.cellsWithPickersByIndexPaths setObject:cell forKey:indexPath];
 }
 
+- (void)removePickerAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 - (void)hidePicker {
     if (self.pickerIndexPath) {
         NSIndexPath *dateCellPath = [NSIndexPath indexPathForRow:_pickerIndexPath.row - 1 inSection:_pickerIndexPath.section];
