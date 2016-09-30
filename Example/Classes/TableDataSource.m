@@ -28,6 +28,10 @@
     return self;
 }
 
+- (void)disableFirstPicker {
+    [self.pickersController removePickerAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+}
+
 - (void)setupTableWithPickers {
     self.pickersController = [[PickerCellsController alloc] init];
     [self.pickersController attachToTableView:self.tableView tableViewsPriorDelegate:self withDelegate:self];
@@ -124,7 +128,7 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    NSString *text = [NSString stringWithFormat:@"Row number %li", (long)row];
+    NSString *text = [NSString stringWithFormat:@"Selected number %li", (long)row];
     return text;
 }
 

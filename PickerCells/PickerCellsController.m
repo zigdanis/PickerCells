@@ -73,7 +73,11 @@
 }
 
 - (void)removePickerAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSIndexPath *nextIndexPath = [NSIndexPath indexPathForRow:indexPath.row + 1 inSection:indexPath.section];
+    if (self.pickerIndexPath == nextIndexPath) {
+        [self hidePicker];
+    }
+    [self.cellsWithPickersByIndexPaths removeObjectForKey:indexPath];
 }
 
 - (void)hidePicker {

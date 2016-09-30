@@ -12,4 +12,6 @@
 
 - (instancetype)initWthTable:(UITableView *)tableView;
 
+- (void)disableFirstPicker;
+
 @end

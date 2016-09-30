@@ -20,8 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [[TableDataSource alloc] initWthTable:self.tableView];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Disable 1st" style:UIBarButtonItemStylePlain target:self.dataSource action:@selector(disableFirstPicker)];
 }
-
 
 
 @end
