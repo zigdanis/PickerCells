@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PickerCells"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "UIDatePicker or UIPickerView that will slide in/out by tapping on the cell in your UITableView"
   s.description      = <<-DESC
     This class adds UIDatePicker or UIPickerView that will slide in/out by tapping on the cell in your UITableView.

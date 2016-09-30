@@ -1,5 +1,5 @@
 # PickerCells
-This class adds UIDatePicker or UIPickerView that will slide in/out by tapping on the cell in your UITableView.
+This class adds UIDatePicker or UIPickerView that will expand or collapse by tapping on the cell in your UITableView.
 
 Inspired by Apple's [DateCell](https://developer.apple.com/library/ios/samplecode/DateCell/Introduction/Intro.html) example and [andjash's](https://github.com/andjash) [DateCellsController](https://github.com/andjash/DateCellsController).
 
@@ -31,8 +31,8 @@ iOS 6.0
   NSIndexPath *path1 = [NSIndexPath indexPathForRow:2 inSection:0];
   [self.pickersController addDatePicker:datePicker1 forIndexPath:path1];
   ``` 
-
-4. And that's pretty much everything for showing pickers by tapping on corresponding cells. This class do not responsible for giving you information about picker selected values. So you should do it by yourself. But you can get pickers from `PickerCellsController` by using corresponding cells indexPaths:
+4. Check it out! Try pressing cells on specified indexPath's to see how pickers will expand underneath them.
+5. This class do not responsible for giving you information about picker selected values. You should do it by yourself. But you can get pickers from `PickerCellsController` object by using corresponding cells indexPaths:
 
   ```objective-c
   id picker = [self.pickersController pickerForOwnerCellIndexPath:indexPath];
